@@ -181,7 +181,9 @@ Lägg till kod för att kunna visa statiska filer, css, bild, frontend js.
 
 [Static files](https://expressjs.com/en/starter/static-files.html)
 
-**Skapa css och lägg till en bild**
+**Skapa css fil och använd i hello world exemplet**
+
+**Återanvänd gammal Nunjucks, ta din nav från tidigare 11ty projekt och anpassa för detta**
 
 ## Flytta routes 
 
