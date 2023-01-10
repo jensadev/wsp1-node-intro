@@ -6,6 +6,8 @@
 - [ ] Installera express.
 - [ ] Koda en route, hello world.
 - [ ] Redigera routen så att du använder Nunjucks för views.
+- [ ] Installera nodemon.
+- [ ] Hantera statiska filer så att du kan inkludera css.
 
 ### Vad behöver du?
 
@@ -13,11 +15,15 @@ Din dator; vscode, wsl och node.
 
 ### Tid
 
-Arbeta med detta under lektion. Du bör bli klar under lektionspasset.
+Arbeta med detta under lektion.
 
 ## Varför
 
 Du behöver kunna skapa en node server för att kunna göra din egen backend. Det är grunden som vi behöver för att kunna arbeta vidare med webbserverprogrammering.
+
+## Om inget fungerar
+
+Du kan forka/klona det här repot. Det innehåller en färdig server som du kan använda för att testa, men se till att du kodar allt efter att du testat. Felsök!
 
 # Hur
 
