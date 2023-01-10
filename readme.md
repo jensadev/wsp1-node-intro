@@ -27,6 +27,10 @@ Du kan forka/klona det här repot. Det innehåller en färdig server som du kan 
 
 # Hur
 
+Följ instruktionerna nedan. Var noga med att läsa felmeddelande (i terminalen) och spana efter squiggly-lines i vscode.
+
+I de kodexempel som följer så betyder `...` att tidigare kod finns där. Du behöver inte skriva in den, men du kan inte heller bara kopiera exemplet rakt av och köra, du behöver den tidigare koden!
+
 ## Installation
 
 Skapa mapp och initiera npm projekt.
@@ -160,9 +164,11 @@ npm install nodemon --save-dev
 
 `package.json`
 ```json
+...
 "scripts": {
     "start": "nodemon index.js"
 },
+...
 ```
 
 Du kan nu starta servern med:
@@ -203,6 +209,7 @@ För att använda routes behöver de laddas och användas i appen.
 const indexRouter = require('./routes/index');
 ...
 app.use('/', indexRouter);
+...
 ```
 
 Innan det fungerar så behöver koden för den existerande rooten (/) flyttas till route filen, `routes/index.js`.
@@ -235,6 +242,7 @@ Om du har flera router med sammanhörande funktion, flytta dessa till samma fil.
 
 `app.js`
 ```javascript
+...
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
     next(createError(404));
@@ -250,6 +258,7 @@ app.use(function (err, req, res, next) {
     res.status(err.status || 500);
     res.render('error.njk');
 });
+...
 ```
 
 `views/error.njk`
