@@ -14,12 +14,13 @@ npm install nodemon --save-dev
 ```
 
 Ändra startscriptet i package.json.
+Lägg även till `-e njk`så att nodemon lyssnar på ändringar i njk filer.
 
 `package.json`
 ```json
 ...
 "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon -e njk index.js"
 },
 ...
 ```
@@ -36,11 +37,34 @@ Lägg till kod för att kunna visa statiska filer, css, bild, frontend js.
 
 [Static files](https://expressjs.com/en/starter/static-files.html)
 
+Filerna/mapparna ska ligga i en public mapp. Det är god praxis och är en standard som används på servrar. Public mappen syns inte, men innehållet i den finns tillgängligt för användaren av servern.
+
 # Övningar
 
 **Skapa css fil och använd i hello world exemplet**
 
 **Återanvänd gammal Nunjucks, ta din nav från tidigare 11ty projekt och anpassa för detta**
+
+Om du anpassar en nav från 11ty som är skriven med _data fil så behöver du tänka på några saker.
+11tys struktur och data mapp fungerar inte i node, det är 11ty specifikt.
+Du kan återanvända en nav.json, men du behöver då konvertera det till ett js objekt och skicka det till din view.
+
+```js
+nav = [
+    {
+        "title": "Home",
+        "url": "/"
+    }
+]
+
+...render(fil, {nav: nav})
+```
+
+```html
+{% for item in nav %}
+    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+{% endfor %}
+```
 
 # Vidare
 

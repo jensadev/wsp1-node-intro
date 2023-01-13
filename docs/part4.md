@@ -43,7 +43,9 @@ router.get('/', async function (req, res, next) {
 module.exports = router
 ```
 
-### Öva flytta tidigare routes till en egen fil
+### Öva skapa flera routes / flytta dem
+
+Skapa routes utifrån din nav, /about /contact osv.
 
 Om du har flera router med sammanhörande funktion, flytta dessa till samma fil. Till exempel användar routes, gör då en `routes/user.js` och samla dessa på ett ställe.
 
