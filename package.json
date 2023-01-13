@@ -4,7 +4,7 @@
   "description": "Skapa mapp och initiera npm projekt.",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon -e njk app.js"
   },
   "keywords": [],
   "author": "",
