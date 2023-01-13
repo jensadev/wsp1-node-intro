@@ -39,6 +39,18 @@ Lägg till kod för att kunna visa statiska filer, css, bild, frontend js.
 
 Filerna/mapparna ska ligga i en public mapp. Det är god praxis och är en standard som används på servrar. Public mappen syns inte, men innehållet i den finns tillgängligt för användaren av servern.
 
+## Sass
+
+Om du vill använda sass. Så behöver du se till att paketet är installerat.
+Sedan uppdaterar du din script fil, skapar mappar osv.
+
+```json
+  "scripts": {
+    "start": "nodemon -e njk app.js & npm run scss",
+    "scss": "sass --watch scss:public/css"
+  },
+```
+
 # Övningar
 
 **Skapa css fil och använd i hello world exemplet**
