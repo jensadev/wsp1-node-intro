@@ -1,9 +1,20 @@
 const express = require('express');
 const app = express();
+const nunjucks = require('nunjucks');
 const port = 3000;
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
+nunjucks.configure('views', {
+    autoescape: true,
+    express: app,
+});
+
+app.use(express.static('public'));
+
+app.get('/', async function (req, res, next) {
+    res.render('index.njk', {
+        message: 'Hello world!',
+        title: 'Nunjucks hello world',
+    });
 });
 
 app.listen(port, () => {
